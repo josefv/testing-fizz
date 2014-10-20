@@ -1,13 +1,13 @@
 Run the following command:
 
 
-npm install -g mocha chai
+`npm install -g mocha chai`
 
 
 Then to run your tests run:
 
 
-mocha -w fizzbuzz.js
+`mocha -w fizzbuzz.js`
 
 
 This will start a test watch server that
