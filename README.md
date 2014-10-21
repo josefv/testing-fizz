@@ -1,6 +1,7 @@
 Run the following commands:
 
 npm install -g mocha chai
+
 npm install chai
 
 Then to run your tests run:
