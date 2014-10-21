@@ -8,8 +8,17 @@ var expect = require('chai').expect
 - fizzbuzz should return the number given if it does not meet one of the above  rules
 
 */
-function fizzbuzz(number) {
-
+function fizzbuzz (number) {
+  if (number % 15 === 0) {
+    return 'fizzbuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return number;
 }
 // Write your code here inside fizzbuzz()
 
@@ -25,12 +34,42 @@ function fizzbuzz(number) {
 */
 describe('Fizzbuzz', function () {
 
-    it('should exist', function () {
-        expect(fizzbuzz).to.exist;
-    });
+  it('should exist', function () {
+    expect(fizzbuzz).to.exist;
+  });
 
-    it('NEXT TEST GOES HERE', function () {
-        expect()
-    });
+  it('should return "fizz" for any number divisible by 3', function () {
+    expect(fizzbuzz(3)).to.equal('fizz');
+  });
+
+  it('should return "buzz" for any number divisible by 5', function () {
+    expect(fizzbuzz(5)).to.equal('buzz');
+  });
+
+  it('should return "fizzbuzz" for any number divisible by 3 AND 5', function () {
+    expect(fizzbuzz(15)).to.equal('fizzbuzz');
+  });
+
+  it('else it should return the inputed number', function () {
+    expect(fizzbuzz(16)).to.equal(16);
+  });
 
 });
+
+/*
+it('should return 2 if given 2', function () {
+      expect(fizzbuzz(2)).to.equal(2);
+  });
+
+  it('should return fizz if given 3', function () {
+      expect(fizzbuzz(3)).to.equal('fizz');
+  });
+
+  it('should return buzz if given 5', function () {
+      expect(fizzbuzz(5)).to.equal('buzz');
+  });
+
+  it('should return fizzbuzz if given 15', function () {
+      expect(fizzbuzz(15)).to.equal('fizzbuzz');
+  });
+*/
